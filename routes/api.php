@@ -11,10 +11,7 @@ Route::get('user/{id}',[UserController::class,'show']);
 Route::post('register',[AuthController::class,'register']);
 Route::post('login',[AuthController::class,'login']);
 
-
-
 /** --------------Protected routes-------------- */
-
 Route::group(['middleware' => ['auth:sanctum']],function (){
 
     /** -----User routes----- */
@@ -35,7 +32,7 @@ Route::group(['middleware' => ['auth:sanctum']],function (){
     Route::get('tasks/{id}',[TaskController::class,'show']);
     Route::post('tasks/add',[TaskController::class,'store']);
     Route::patch('tasks/update/{id}',[TaskController::class,'update']);
-    Route::delete('tasks/delete{id}',[TaskController::class,'destroy']);
+    Route::delete('tasks/delete/{id}',[TaskController::class,'destroy']);
 
 });
 
