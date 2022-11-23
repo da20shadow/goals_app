@@ -21,6 +21,7 @@ return new class extends Migration
             $table->enum('priority',['No priority','Normal','High','Urgent'])->default('No priority');
             $table->foreignIdFor(\App\Models\Goal::class)->nullable(true);
             $table->foreignIdFor(\App\Models\Task::class)->nullable(true);
+            $table->foreignIdFor(\App\Models\User::class)->nullable(true);
             $table->date('due_date')->nullable(true);
             $table->timestamps();
         });
