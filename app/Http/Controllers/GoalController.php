@@ -102,28 +102,28 @@ class GoalController extends Controller
             $inputDesc = $request->validate(['description' => ['string','min:10']]);
             Goal::where('user_id',$user_id)->where('id',$id)
                 ->update(['description' => $inputDesc['description']]);
-            array_push($message,'Successfully goal description!');
+            array_push($message,'Successfully updated goal description!');
         }
 
         if (isset($fields['category'])){
             $inputCategory = $request->validate(['category' => ['Integer']]);
             Goal::where('user_id',$user_id)->where('id',$id)
                 ->update(['category' => $inputCategory['category']]);
-            array_push($message,'Successfully goal category!');
+            array_push($message,'Successfully updated goal category!');
         }
 
         if (isset($fields['due_date'])){
             $inputDueDate = $request->validate(['due_date' => ['Date']]);
             Goal::where('user_id',$user_id)->where('id',$id)
                 ->update(['due_date' => $inputDueDate['due_date']]);
-            array_push($message,'Successfully goal Due Date!');
+            array_push($message,'Successfully updated goal Due Date!');
         }
 
         if (isset($fields['completed'])){
             $inputDesc = $request->validate(['completed' => ['boolean']]);
             Goal::where('user_id',$user_id)->where('id',$id)
                 ->update(['completed' => $inputDesc['completed']]);
-            array_push($message,'Successfully completed goal!');
+            array_push($message,'Successfully updated completed goal!');
         }
 
         return response()->json($message);
@@ -138,7 +138,9 @@ class GoalController extends Controller
     {
         $user_id = auth()->user()->getAuthIdentifier();
 
-        $result = Goal::where('id',$id)->where('user_id',$user_id)
+        $result = DB::table('goals')
+            ->where('id',$id)
+            ->where('user_id',$user_id)
             ->delete();
 
         if (!$result){
