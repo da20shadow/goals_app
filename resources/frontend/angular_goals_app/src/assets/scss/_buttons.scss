@@ -1,0 +1,122 @@
+//Buttons Sizes
+.btn {
+  position: relative;
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px 29px;
+  overflow: hidden;
+  &:active{
+    transform: scale(0.99);
+  }
+}
+.btn-md {
+  @extend .btn;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 16px 35px;
+}
+.btn-lg {
+  @extend .btn;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 18px 40px;
+}
+.btn-r-icon {
+  i{margin-left: 7px}
+}
+.btn-l-icon {
+  i{margin-right: 7px}
+}
+
+//Buttons styles
+.btn-primary {
+  background-color: $blue-400;
+  color: $blue-100;
+  &:hover{
+    background-color: $blue-500;
+  }
+  &:active{
+    background-color: $blue;
+  }
+}
+.btn-out {
+  @extend .btn;
+  border: 1px solid;
+  padding: 11px 29px;
+  background-color: transparent;
+  color: $blue-500;
+  &:hover{
+    background-color: $blue-400;
+    color: $blue-100;
+  }
+  &:active{
+    background-color: $blue-500;
+    color: $blue-100;
+  }
+}
+.btn-error {
+  background-color: $red-400;
+  color: $red-100;
+  &:hover{
+    background-color: $red-500;
+  }
+  &:active{
+    background-color: $red;
+  }
+}
+.disabled {
+  cursor: not-allowed;
+  transition: none;
+  background-color: $neutral-25;
+  color: $neutral-200;
+  &:hover{
+    transform: none;
+    background-color: $neutral-25;
+    color: $neutral-200;
+  }
+  &:active{
+    transform: none;
+  }
+}
+
+//Icon Buttons
+.icon-btn{
+  cursor: pointer;
+  background-color: $primary;
+  color: $blue-100;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 50%;
+  &:hover{
+    background-color: $blue-300;
+  }
+  &:active{
+    background-color: $neutral;
+  }
+}
+.icon-btn-out{
+  @extend .icon-btn;
+  border: 1px solid;
+  padding: 11px;
+  background-color: transparent;
+  color: $primary;
+  &:hover{
+    background-color: $neutral-25;
+  }
+  &:active{
+    background-color: $blue-200;
+  }
+}
+.icon-btn-none {
+  @extend .icon-btn;
+  background-color: transparent;
+  color: $primary;
+  &:hover{
+    background-color: $neutral-25;
+  }
+  &:active{
+    background-color: $blue-200;
+  }
+}
