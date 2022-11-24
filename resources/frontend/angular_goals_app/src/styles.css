@@ -1,0 +1,228 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, menu {
+  list-style-type: none;
+}
+
+input, button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+button, select {
+  text-transform: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+h1 {
+  font-size: 84px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.text-base {
+  font-size: 16px;
+}
+
+.text-md {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.text-lg {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.btn, .btn-out, .btn-lg, .btn-md {
+  position: relative;
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px 29px;
+  overflow: hidden;
+}
+.btn:active, .btn-out:active, .btn-lg:active, .btn-md:active {
+  transform: scale(0.99);
+}
+
+.btn-md {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 16px 35px;
+}
+
+.btn-lg {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 18px 40px;
+}
+
+.btn-r-icon i {
+  margin-left: 7px;
+}
+
+.btn-l-icon i {
+  margin-right: 7px;
+}
+
+.btn-primary {
+  background-color: #3769f1;
+  color: #eef3ff;
+}
+.btn-primary:hover {
+  background-color: #0e40c7;
+}
+.btn-primary:active {
+  background-color: #04257e;
+}
+
+.btn-out {
+  border: 1px solid;
+  padding: 11px 29px;
+  background-color: transparent;
+  color: #0e40c7;
+}
+.btn-out:hover {
+  background-color: #3769f1;
+  color: #eef3ff;
+}
+.btn-out:active {
+  background-color: #0e40c7;
+  color: #eef3ff;
+}
+
+.btn-error {
+  background-color: #e05048;
+  color: #fcf1f2;
+}
+.btn-error:hover {
+  background-color: #c7332a;
+}
+.btn-error:active {
+  background-color: #9e1421;
+}
+
+.disabled {
+  cursor: not-allowed;
+  transition: none;
+  background-color: #ecedef;
+  color: #b2bbbd;
+}
+.disabled:hover {
+  transform: none;
+  background-color: #ecedef;
+  color: #b2bbbd;
+}
+.disabled:active {
+  transform: none;
+}
+
+.icon-btn, .icon-btn-none, .icon-btn-out {
+  cursor: pointer;
+  background-color: #3769f1;
+  color: #eef3ff;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 50%;
+}
+.icon-btn:hover, .icon-btn-none:hover, .icon-btn-out:hover {
+  background-color: #7b9fff;
+}
+.icon-btn:active, .icon-btn-none:active, .icon-btn-out:active {
+  background-color: #182233;
+}
+
+.icon-btn-out {
+  border: 1px solid;
+  padding: 11px;
+  background-color: transparent;
+  color: #3769f1;
+}
+.icon-btn-out:hover {
+  background-color: #ecedef;
+}
+.icon-btn-out:active {
+  background-color: #cad8ff;
+}
+
+.icon-btn-none {
+  background-color: transparent;
+  color: #3769f1;
+}
+.icon-btn-none:hover {
+  background-color: #ecedef;
+}
+.icon-btn-none:active {
+  background-color: #cad8ff;
+}
+
+/*# sourceMappingURL=styles.css.map */
